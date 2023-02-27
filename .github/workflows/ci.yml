@@ -1,7 +1,8 @@
 name: mainline
 on:
   push:
-    branches: 'issue/*'
+    branches: 
+      - '**/issue**'
 
 jobs:
   mainline:
