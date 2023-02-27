@@ -1,8 +1,7 @@
 name: mainline
 on:
-  issues:
-    types:
-      - opened
+  branches:
+    "**issue#**"
 jobs:
   mainline:
     runs-on: ubuntu-latest
