@@ -11,8 +11,8 @@ jobs:
   verify_issue:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.issue.html_url }}
+    - uses: actions/checkout@v3
+    - run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ISSUE: ${{ github.event.issue.html_url }}
