@@ -15,4 +15,4 @@ jobs:
     - run: echo "$ISSUE --body Thank you for opening this issue!"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        ISSUE: ${{github.event.issue.html_url}}
+        ISSUE: ${{https://github.com/kea-classrooms/ci-sst/issues/2}}
