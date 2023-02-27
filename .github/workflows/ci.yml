@@ -1,7 +1,7 @@
 name: mainline
 on:
-  branches:
-    "**issue#**"
+  push:
+    branches: '**issue#**'
 jobs:
   mainline:
     runs-on: ubuntu-latest
