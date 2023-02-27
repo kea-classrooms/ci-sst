@@ -1,5 +1,8 @@
 name: mainline
-on: [push]
+on:
+  issues:
+    types:
+      - opened
 jobs:
   mainline:
     runs-on: ubuntu-latest
@@ -7,10 +10,6 @@ jobs:
     - uses: actions/checkout@v3
     - run: echo "The SHA1 key of the commit that triggered this job is $(git rev-parse --short HEAD)"
   verify_issue:
-    on:
-      issues:
-        types:
-          - opened
     runs-on: ubuntu-latest
     steps:
       -uses: actions/checkout@v3
