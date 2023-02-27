@@ -1,0 +1,6 @@
+name: mainline
+on: [push]
+jobs:
+	steps:
+	- uses actions/checkout@v3
+	- run: echo "The SHA1 key of the commit that triggered this job is $(git rev-parse --short HEAD)"
